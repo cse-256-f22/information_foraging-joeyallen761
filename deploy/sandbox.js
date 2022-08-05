@@ -1,6 +1,10 @@
 require(__dirname + '/../aws-credentials.json'); // make sure that file is there before trying anything else
 const AWS = require('aws-sdk');
 
+console.log("process env url",process.env.npm_package_url)
+console.log("process env ",process.env)
+//console.log("process",process)
+
 if (
     process.env.npm_package_url === "put your repository's home page url here"
 ) {
