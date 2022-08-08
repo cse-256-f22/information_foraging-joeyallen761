@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 console.log("process env url",process.env.npm_package_url)
 console.log("process env ",process.env)
 //console.log("process",process)
-
+process.env.npm_package_url = "https://cse-256-f22.github.io/information_foraging-joeyallen761/";
 if (
     process.env.npm_package_url === "put your repository's home page url here"
 ) {
@@ -15,11 +15,12 @@ if (
 
 AWS.config.loadFromPath(__dirname + '/../aws-credentials.json');
 
-const extQ = `<?xml version="1.0" encoding="UTF-8"?>
+const extQ = `
                     <ExternalQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd">
                         <ExternalURL>${process.env.npm_package_url}?wustl_key=riley.mccuen.testing%26sandbox=false%26project=information-foraging%26iteration=1%26tag=math</ExternalURL>
                         <FrameHeight>0</FrameHeight>
                     </ExternalQuestion>`;
+console.log("extQ",extQ)
 
 const request = {
     AssignmentDurationInSeconds: 100000,
