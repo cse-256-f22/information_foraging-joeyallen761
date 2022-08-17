@@ -16,7 +16,7 @@ if (
 AWS.config.loadFromPath(__dirname + '/../aws-credentials.json');
 
 const extQ = `<ExternalQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd">
-                        <ExternalURL>${process.env.npm_package_url}?wustl_key=riley.mccuen.testing&sandbox=false&project=information-foraging&iteration=1&tag=math</ExternalURL>
+                        <ExternalURL>${process.env.npm_package_url}?wustl_key=riley.mccuen.testing%26sandbox=false%26project=information-foraging%26iteration=1%26tag=math</ExternalURL>
                         <FrameHeight>0</FrameHeight>
                     </ExternalQuestion>`;
 console.log("extQ",extQ)
