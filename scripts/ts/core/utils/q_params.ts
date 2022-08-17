@@ -1,4 +1,5 @@
 const qParams = new URL(window.location.href).searchParams;
+console.log("windowlocationhref",window.location.href)
 export const params = {
     wustl_key: '',
     sandbox: false,
@@ -7,10 +8,11 @@ export const params = {
     tag: '',
 };
 try {
+    console.log("qParams",qParams)
     qParams.forEach(console.log);
     if (
         ['wustl_key', 'sandbox', 'project', 'iteration', 'tag'].every((key) => {
-            console.log('key: ' + qParams.has(key));
+            console.log(key, 'key: ' + qParams.has(key));
             return qParams.has(key);
         })
     ) {
